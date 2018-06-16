@@ -5,6 +5,7 @@
 ___
 
 <span id="benchmark-lps2lts_time_memory"></span>
+
 ### lps2lts raw time and max heap
 
 In this benchmark we measure raw time and max heap usage for the **lps2lts** tool on various inputs and run with different flags.
@@ -16,12 +17,13 @@ Max heap usage is measure with valgrind massif.
 ![benchmark-lps2lts_time_memory-medium-plot](https://raw.githubusercontent.com/gkarlos/mcrl2-perf/master/docs/images/plots/time-memory-medium.png)
 
 <span id="benchmark-lps2lts_allocators"></span>
+
 ### lps2lts allocators
 
 In this benchmark we measure raw time for the **lps2lts** tool on different inputs and flags using three different memory allocators:
-- glibc malloc
-- TCmalloc
-- JEmalloc
+- [glibc malloc](https://sourceware.org/glibc/wiki/MallocInternals)
+- [TCmalloc](http://goog-perftools.sourceforge.net/doc/tcmalloc.html)
+- [JEmalloc](http://jemalloc.net/)
 
 ![benchmark-lps2lts_allocators-small-plot](https://raw.githubusercontent.com/gkarlos/mcrl2-perf/master/docs/images/plots/allocators-small.png)
 
