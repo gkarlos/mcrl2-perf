@@ -1,0 +1,1076 @@
+desc: --massif-out-file=results/small/allow.mcrl2-rjittyc --cached --prune.massif.out
+cmd: ../../mcrl2-release/mcrl2/build/stage/bin//lps2lts -rjittyc --cached --prune input-small/allow.mcrl2.lps
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=14955115
+mem_heap_B=72704
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=15534474
+mem_heap_B=1175356
+mem_heap_extra_B=1676
+mem_stacks_B=0
+heap_tree=detailed
+n4: 1175356 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1048576 0x60F8F41: atermpp::detail::initialise_aterm_administration() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_atermpp.so)
+  n1: 1048576 0x60E38B9: _GLOBAL__sub_I_function_symbol.cpp (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_atermpp.so)
+   n1: 1048576 0x40106B8: call_init.part.0 (dl-init.c:72)
+    n1: 1048576 0x40107C9: _dl_init (dl-init.c:30)
+     n1: 1048576 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+      n1: 1048576 0x3: ???
+       n1: 1048576 0xFFEFFFF39: ???
+        n1: 1048576 0xFFEFFFF6C: ???
+         n1: 1048576 0xFFEFFFF75: ???
+          n1: 1048576 0xFFEFFFF7E: ???
+           n0: 1048576 0xFFEFFFF86: ???
+ n1: 72704 0x664BEFE: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+  n1: 72704 0x40106B8: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x40107C9: _dl_init (dl-init.c:30)
+    n1: 72704 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+     n1: 72704 0x3: ???
+      n1: 72704 0xFFEFFFF39: ???
+       n1: 72704 0xFFEFFFF6C: ???
+        n1: 72704 0xFFEFFFF75: ???
+         n1: 72704 0xFFEFFFF7E: ???
+          n0: 72704 0xFFEFFFF86: ???
+ n2: 32760 0x60F8302: atermpp::detail::allocate_block(unsigned long) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_atermpp.so)
+  n1: 16384 0x60F92C4: atermpp::detail::initialise_aterm_administration() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_atermpp.so)
+   n1: 16384 0x60E38B9: _GLOBAL__sub_I_function_symbol.cpp (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_atermpp.so)
+    n1: 16384 0x40106B8: call_init.part.0 (dl-init.c:72)
+     n1: 16384 0x40107C9: _dl_init (dl-init.c:30)
+      n1: 16384 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+       n1: 16384 0x3: ???
+        n1: 16384 0xFFEFFFF39: ???
+         n1: 16384 0xFFEFFFF6C: ???
+          n1: 16384 0xFFEFFFF75: ???
+           n1: 16384 0xFFEFFFF7E: ???
+            n0: 16384 0xFFEFFFF86: ???
+  n1: 16376 0x41BF23: atermpp::detail::allocate_term(unsigned long) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+   n1: 16376 0x4213B1: atermpp::detail::_aterm* atermpp::detail::term_appl2<atermpp::aterm>(atermpp::function_symbol const&, atermpp::aterm const&, atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+    n1: 16376 0x5E6EADC: mcrl2::core::detail::default_value_BooleanOr() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+     n1: 16376 0x5E60775: _GLOBAL__sub_I_core.cpp (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+      n1: 16376 0x40106B8: call_init.part.0 (dl-init.c:72)
+       n1: 16376 0x40107C9: _dl_init (dl-init.c:30)
+        n1: 16376 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+         n1: 16376 0x3: ???
+          n1: 16376 0xFFEFFFF39: ???
+           n1: 16376 0xFFEFFFF6C: ???
+            n1: 16376 0xFFEFFFF75: ???
+             n1: 16376 0xFFEFFFF7E: ???
+              n0: 16376 0xFFEFFFF86: ???
+ n0: 21316 in 16 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=3
+#-----------
+time=15980560
+mem_heap_B=1286893
+mem_heap_extra_B=2867
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=16595030
+mem_heap_B=1322720
+mem_heap_extra_B=7024
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=17155299
+mem_heap_B=1330456
+mem_heap_extra_B=5424
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=17642877
+mem_heap_B=1330536
+mem_heap_extra_B=5456
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=18077091
+mem_heap_B=1456419
+mem_heap_extra_B=6229
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=18513713
+mem_heap_B=1456459
+mem_heap_extra_B=6245
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=19226650
+mem_heap_B=1464219
+mem_heap_extra_B=7701
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=19690358
+mem_heap_B=1485819
+mem_heap_extra_B=9277
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=20262521
+mem_heap_B=1491580
+mem_heap_extra_B=9676
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=20624962
+mem_heap_B=1496956
+mem_heap_extra_B=11620
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=21265493
+mem_heap_B=1497972
+mem_heap_extra_B=11604
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=21787987
+mem_heap_B=1509196
+mem_heap_extra_B=9588
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=22496397
+mem_heap_B=1509260
+mem_heap_extra_B=9596
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=23302652
+mem_heap_B=1515500
+mem_heap_extra_B=11580
+mem_stacks_B=0
+heap_tree=detailed
+n7: 1515500 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1048576 0x60F8F41: atermpp::detail::initialise_aterm_administration() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_atermpp.so)
+  n1: 1048576 0x60E38B9: _GLOBAL__sub_I_function_symbol.cpp (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_atermpp.so)
+   n1: 1048576 0x40106B8: call_init.part.0 (dl-init.c:72)
+    n1: 1048576 0x40107C9: _dl_init (dl-init.c:30)
+     n1: 1048576 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+      n1: 1048576 0x3: ???
+       n1: 1048576 0xFFEFFFF39: ???
+        n1: 1048576 0xFFEFFFF6C: ???
+         n1: 1048576 0xFFEFFFF75: ???
+          n1: 1048576 0xFFEFFFF7E: ???
+           n0: 1048576 0xFFEFFFF86: ???
+ n2: 163704 0x60F8302: atermpp::detail::allocate_block(unsigned long) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_atermpp.so)
+  n7: 147320 0x41BF23: atermpp::detail::allocate_term(unsigned long) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+   n2: 32768 0x422C76: atermpp::detail::_aterm* atermpp::detail::term_appl3<atermpp::aterm>(atermpp::function_symbol const&, atermpp::aterm const&, atermpp::aterm const&, atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+    n1: 16384 0x5E722B8: mcrl2::core::detail::default_value_DataVarId() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+     n1: 16384 0x5E7294F: mcrl2::core::detail::default_value_StateOr() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+      n1: 16384 0x5E607A2: _GLOBAL__sub_I_core.cpp (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+       n1: 16384 0x40106B8: call_init.part.0 (dl-init.c:72)
+        n1: 16384 0x40107C9: _dl_init (dl-init.c:30)
+         n1: 16384 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+          n1: 16384 0x3: ???
+           n1: 16384 0xFFEFFFF39: ???
+            n1: 16384 0xFFEFFFF6C: ???
+             n1: 16384 0xFFEFFFF75: ???
+              n1: 16384 0xFFEFFFF7E: ???
+               n0: 16384 0xFFEFFFF86: ???
+    n1: 16384 0x422FB2: mcrl2::data::application::application(mcrl2::data::data_expression const&, mcrl2::data::data_expression const&, mcrl2::data::data_expression const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+     n1: 16384 0x4F10E00: mcrl2::data::less_equal(mcrl2::data::data_expression const&, mcrl2::data::data_expression const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+      n1: 16384 0x4F2EE85: mcrl2::data::standard_generate_equations_code(mcrl2::data::sort_expression const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+       n1: 16384 0x4F58077: mcrl2::data::data_specification::find_associated_system_defined_data_types_for_a_sort(mcrl2::data::sort_expression const&, std::set<mcrl2::data::function_symbol, std::less<mcrl2::data::function_symbol>, std::allocator<mcrl2::data::function_symbol> >&, std::set<mcrl2::data::function_symbol, std::less<mcrl2::data::function_symbol>, std::allocator<mcrl2::data::function_symbol> >&, std::set<mcrl2::data::data_equation, std::less<mcrl2::data::data_equation>, std::allocator<mcrl2::data::data_equation> >&, bool) const (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+        n1: 16384 0x4F594A7: mcrl2::data::data_specification::import_data_type_for_system_defined_sort(mcrl2::data::sort_expression const&) const (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+         n1: 16384 0x4F598DA: mcrl2::data::data_specification::add_data_types_for_sorts() const (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+          n1: 16384 0x4F6F990: void mcrl2::lps::resolve_summand_variable_name_clashes<mcrl2::lps::stochastic_specification>(mcrl2::lps::stochastic_specification&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+           n1: 16384 0x4ECF29A: mcrl2::lts::lps2lts_algorithm::initialise_lts_generation(mcrl2::lts::lts_generation_options*) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+            n1: 16384 0x44B078: lps2lts_tool::run() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+             n1: 16384 0x44B5C4: mcrl2::utilities::tools::tool::execute(int, char**) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+              n0: 16384 0x419BED: main (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+   n2: 32736 0x42324C: atermpp::detail::_aterm* atermpp::detail::term_appl4<atermpp::aterm>(atermpp::function_symbol const&, atermpp::aterm const&, atermpp::aterm const&, atermpp::aterm const&, atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+    n1: 16368 0x5E75847: mcrl2::core::detail::default_value_DataSpec() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+     n1: 16368 0x5E60AC0: _GLOBAL__sub_I_core.cpp (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+      n1: 16368 0x40106B8: call_init.part.0 (dl-init.c:72)
+       n1: 16368 0x40107C9: _dl_init (dl-init.c:30)
+        n1: 16368 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+         n1: 16368 0x3: ???
+          n1: 16368 0xFFEFFFF39: ???
+           n1: 16368 0xFFEFFFF6C: ???
+            n1: 16368 0xFFEFFFF75: ???
+             n1: 16368 0xFFEFFFF7E: ???
+              n0: 16368 0xFFEFFFF86: ???
+    n1: 16368 0x4EC981E: mcrl2::data::data_equation::data_equation<atermpp::term_list<mcrl2::data::variable> >(atermpp::term_list<mcrl2::data::variable> const&, mcrl2::data::data_expression const&, mcrl2::data::data_expression const&, atermpp::enable_if_container<atermpp::term_list<mcrl2::data::variable>, mcrl2::data::variable>::type*) [clone .constprop.2190] (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+     n1: 16368 0x4F119FC: mcrl2::data::sort_bool::bool_generate_equations_code() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+      n1: 16368 0x4F583BA: mcrl2::data::data_specification::find_associated_system_defined_data_types_for_a_sort(mcrl2::data::sort_expression const&, std::set<mcrl2::data::function_symbol, std::less<mcrl2::data::function_symbol>, std::allocator<mcrl2::data::function_symbol> >&, std::set<mcrl2::data::function_symbol, std::less<mcrl2::data::function_symbol>, std::allocator<mcrl2::data::function_symbol> >&, std::set<mcrl2::data::data_equation, std::less<mcrl2::data::data_equation>, std::allocator<mcrl2::data::data_equation> >&, bool) const (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+       n1: 16368 0x4F594A7: mcrl2::data::data_specification::import_data_type_for_system_defined_sort(mcrl2::data::sort_expression const&) const (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+        n1: 16368 0x4F598DA: mcrl2::data::data_specification::add_data_types_for_sorts() const (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+         n1: 16368 0x4F6F990: void mcrl2::lps::resolve_summand_variable_name_clashes<mcrl2::lps::stochastic_specification>(mcrl2::lps::stochastic_specification&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+          n1: 16368 0x4ECF29A: mcrl2::lts::lps2lts_algorithm::initialise_lts_generation(mcrl2::lts::lts_generation_options*) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+           n1: 16368 0x44B078: lps2lts_tool::run() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+            n1: 16368 0x44B5C4: mcrl2::utilities::tools::tool::execute(int, char**) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+             n0: 16368 0x419BED: main (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+   n1: 16376 0x4213B1: atermpp::detail::_aterm* atermpp::detail::term_appl2<atermpp::aterm>(atermpp::function_symbol const&, atermpp::aterm const&, atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+    n1: 16376 0x5E6EADC: mcrl2::core::detail::default_value_BooleanOr() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+     n1: 16376 0x5E60775: _GLOBAL__sub_I_core.cpp (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+      n1: 16376 0x40106B8: call_init.part.0 (dl-init.c:72)
+       n1: 16376 0x40107C9: _dl_init (dl-init.c:30)
+        n1: 16376 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+         n1: 16376 0x3: ???
+          n1: 16376 0xFFEFFFF39: ???
+           n1: 16376 0xFFEFFFF6C: ???
+            n1: 16376 0xFFEFFFF75: ???
+             n1: 16376 0xFFEFFFF7E: ???
+              n0: 16376 0xFFEFFFF86: ???
+   n1: 16376 0x431B73: atermpp::detail::_aterm* atermpp::detail::local_term_appl_with_converter<atermpp::aterm, atermpp::term_appl_iterator<atermpp::aterm>, atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::term_appl<atermpp::aterm> const&)::{lambda(atermpp::aterm const&)#1}>(atermpp::function_symbol const&, atermpp::term_appl_iterator<atermpp::aterm>, atermpp::function_symbol const&, atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::term_appl<atermpp::aterm> const&)::{lambda(atermpp::aterm const&)#1} const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+    n1: 16376 0x431CC9: atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder>::apply(atermpp::term_appl<atermpp::aterm> const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+     n1: 16376 0x431933: atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+      n1: 16376 0x43172A: atermpp::detail::_aterm* atermpp::detail::make_list_forward<atermpp::aterm, atermpp::term_list_iterator<atermpp::aterm>, atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::term_list<atermpp::aterm> const&)::{lambda(atermpp::aterm const&)#1}>(atermpp::term_list_iterator<atermpp::aterm>, atermpp::detail::_aterm*, atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::term_list<atermpp::aterm> const&)::{lambda(atermpp::aterm const&)#1} const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+       n1: 16376 0x43198B: atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+        n1: 16376 0x431A96: atermpp::detail::_aterm* atermpp::detail::local_term_appl_with_converter<atermpp::aterm, atermpp::term_appl_iterator<atermpp::aterm>, atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::term_appl<atermpp::aterm> const&)::{lambda(atermpp::aterm const&)#1}>(atermpp::function_symbol const&, atermpp::term_appl_iterator<atermpp::aterm>, atermpp::function_symbol const&, atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::term_appl<atermpp::aterm> const&)::{lambda(atermpp::aterm const&)#1} const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+         n1: 16376 0x431CC9: atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder>::apply(atermpp::term_appl<atermpp::aterm> const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+          n1: 16376 0x431933: atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+           n1: 16376 0x43172A: atermpp::detail::_aterm* atermpp::detail::make_list_forward<atermpp::aterm, atermpp::term_list_iterator<atermpp::aterm>, atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::term_list<atermpp::aterm> const&)::{lambda(atermpp::aterm const&)#1}>(atermpp::term_list_iterator<atermpp::aterm>, atermpp::detail::_aterm*, atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::term_list<atermpp::aterm> const&)::{lambda(atermpp::aterm const&)#1} const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+            n1: 16376 0x43198B: atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+             n1: 16376 0x431A96: atermpp::detail::_aterm* atermpp::detail::local_term_appl_with_converter<atermpp::aterm, atermpp::term_appl_iterator<atermpp::aterm>, atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::term_appl<atermpp::aterm> const&)::{lambda(atermpp::aterm const&)#1}>(atermpp::function_symbol const&, atermpp::term_appl_iterator<atermpp::aterm>, atermpp::function_symbol const&, atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::term_appl<atermpp::aterm> const&)::{lambda(atermpp::aterm const&)#1} const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+              n1: 16376 0x431CC9: atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder>::apply(atermpp::term_appl<atermpp::aterm> const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+               n1: 16376 0x431933: atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+                n1: 16376 0x431A96: atermpp::detail::_aterm* atermpp::detail::local_term_appl_with_converter<atermpp::aterm, atermpp::term_appl_iterator<atermpp::aterm>, atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::term_appl<atermpp::aterm> const&)::{lambda(atermpp::aterm const&)#1}>(atermpp::function_symbol const&, atermpp::term_appl_iterator<atermpp::aterm>, atermpp::function_symbol const&, atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::term_appl<atermpp::aterm> const&)::{lambda(atermpp::aterm const&)#1} const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+                 n1: 16376 0x431CC9: atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder>::apply(atermpp::term_appl<atermpp::aterm> const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+                  n1: 16376 0x431933: atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+                   n1: 16376 0x4489DA: mcrl2::lps::specification_base<mcrl2::lps::stochastic_linear_process, mcrl2::lps::stochastic_process_initializer>::load(std::istream&, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+                    n1: 16376 0x44ACC9: void mcrl2::lps::load_lps<mcrl2::lps::stochastic_specification>(mcrl2::lps::stochastic_specification&, std::istream&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+                     n1: 16376 0x44AEAC: void mcrl2::lps::load_lps<mcrl2::lps::stochastic_specification>(mcrl2::lps::stochastic_specification&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+                      n1: 16376 0x44B000: lps2lts_tool::run() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+                       n1: 16376 0x44B5C4: mcrl2::utilities::tools::tool::execute(int, char**) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+                        n0: 16376 0x419BED: main (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+   n1: 16368 0x5E6B540: mcrl2::core::detail::default_value_Number() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+    n1: 16368 0x5E7228F: mcrl2::core::detail::default_value_DataVarId() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+     n1: 16368 0x5E7294F: mcrl2::core::detail::default_value_StateOr() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+      n1: 16368 0x5E607A2: _GLOBAL__sub_I_core.cpp (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+       n1: 16368 0x40106B8: call_init.part.0 (dl-init.c:72)
+        n1: 16368 0x40107C9: _dl_init (dl-init.c:30)
+         n1: 16368 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+          n1: 16368 0x3: ???
+           n1: 16368 0xFFEFFFF39: ???
+            n1: 16368 0xFFEFFFF6C: ???
+             n1: 16368 0xFFEFFFF75: ???
+              n1: 16368 0xFFEFFFF7E: ???
+               n0: 16368 0xFFEFFFF86: ???
+   n1: 16360 0x542B57F: atermpp::detail::_aterm* atermpp::detail::term_appl6<atermpp::aterm>(atermpp::function_symbol const&, atermpp::aterm const&, atermpp::aterm const&, atermpp::aterm const&, atermpp::aterm const&, atermpp::aterm const&, atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lps.so)
+    n1: 16360 0x5E76140: mcrl2::core::detail::default_value_LinearProcessSummand() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+     n1: 16360 0x5E60B7E: _GLOBAL__sub_I_core.cpp (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+      n1: 16360 0x40106B8: call_init.part.0 (dl-init.c:72)
+       n1: 16360 0x40107C9: _dl_init (dl-init.c:30)
+        n1: 16360 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+         n1: 16360 0x3: ???
+          n1: 16360 0xFFEFFFF39: ???
+           n1: 16360 0xFFEFFFF6C: ???
+            n1: 16360 0xFFEFFFF75: ???
+             n1: 16360 0xFFEFFFF7E: ???
+              n0: 16360 0xFFEFFFF86: ???
+   n1: 16336 0x542B767: atermpp::detail::_aterm* atermpp::detail::term_appl5<atermpp::aterm>(atermpp::function_symbol const&, atermpp::aterm const&, atermpp::aterm const&, atermpp::aterm const&, atermpp::aterm const&, atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lps.so)
+    n1: 16336 0x5E763F8: mcrl2::core::detail::default_value_LinProcSpec() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+     n1: 16336 0x5E60E04: _GLOBAL__sub_I_core.cpp (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+      n1: 16336 0x40106B8: call_init.part.0 (dl-init.c:72)
+       n1: 16336 0x40107C9: _dl_init (dl-init.c:30)
+        n1: 16336 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+         n1: 16336 0x3: ???
+          n1: 16336 0xFFEFFFF39: ???
+           n1: 16336 0xFFEFFFF6C: ???
+            n1: 16336 0xFFEFFFF75: ???
+             n1: 16336 0xFFEFFFF7E: ???
+              n0: 16336 0xFFEFFFF86: ???
+  n1: 16384 0x60F92C4: atermpp::detail::initialise_aterm_administration() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_atermpp.so)
+   n1: 16384 0x60E38B9: _GLOBAL__sub_I_function_symbol.cpp (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_atermpp.so)
+    n1: 16384 0x40106B8: call_init.part.0 (dl-init.c:72)
+     n1: 16384 0x40107C9: _dl_init (dl-init.c:30)
+      n1: 16384 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+       n1: 16384 0x3: ???
+        n1: 16384 0xFFEFFFF39: ???
+         n1: 16384 0xFFEFFFF6C: ???
+          n1: 16384 0xFFEFFFF75: ???
+           n1: 16384 0xFFEFFFF7E: ???
+            n0: 16384 0xFFEFFFF86: ???
+ n1: 131072 0x4ECFBFE: mcrl2::lts::lps2lts_algorithm::initialise_lts_generation(mcrl2::lts::lts_generation_options*) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+  n1: 131072 0x44B078: lps2lts_tool::run() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+   n1: 131072 0x44B5C4: mcrl2::utilities::tools::tool::execute(int, char**) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+    n0: 131072 0x419BED: main (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+ n1: 72704 0x664BEFE: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+  n1: 72704 0x40106B8: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x40107C9: _dl_init (dl-init.c:30)
+    n1: 72704 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+     n1: 72704 0x3: ???
+      n1: 72704 0xFFEFFFF39: ???
+       n1: 72704 0xFFEFFFF6C: ???
+        n1: 72704 0xFFEFFFF75: ???
+         n1: 72704 0xFFEFFFF7E: ???
+          n0: 72704 0xFFEFFFF86: ???
+ n0: 60228 in 93 places, all below massif's threshold (1.00%)
+ n1: 23920 0x6B941EE: __new_exitfn (cxa_atexit.c:101)
+  n1: 23920 0x6B94297: __cxa_atexit (cxa_atexit.c:35)
+   n0: 23920 in 23 places, all below massif's threshold (1.00%)
+ n1: 15296 0x60E5ED1: std::pair<std::__detail::_Node_iterator<std::pair<atermpp::detail::_function_symbol_primary_data const, atermpp::detail::_function_symbol_auxiliary_data>, false, true>, bool> std::_Hashtable<atermpp::detail::_function_symbol_primary_data, std::pair<atermpp::detail::_function_symbol_primary_data const, atermpp::detail::_function_symbol_auxiliary_data>, std::allocator<std::pair<atermpp::detail::_function_symbol_primary_data const, atermpp::detail::_function_symbol_auxiliary_data> >, std::__detail::_Select1st, std::equal_to<atermpp::detail::_function_symbol_primary_data>, std::hash<atermpp::detail::_function_symbol_primary_data>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_emplace<atermpp::detail::_function_symbol_primary_data, atermpp::detail::_function_symbol_auxiliary_data>(std::integral_constant<bool, true>, atermpp::detail::_function_symbol_primary_data&&, atermpp::detail::_function_symbol_auxiliary_data&&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_atermpp.so)
+  n1: 15296 0x60E46E1: atermpp::function_symbol::function_symbol(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long, bool) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_atermpp.so)
+   n0: 15296 in 157 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=17
+#-----------
+time=24130066
+mem_heap_B=1514860
+mem_heap_extra_B=11820
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=24713294
+mem_heap_B=1507880
+mem_heap_extra_B=9040
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=25160507
+mem_heap_B=1511768
+mem_heap_extra_B=10200
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=25766785
+mem_heap_B=1510812
+mem_heap_extra_B=9212
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=26213584
+mem_heap_B=1512468
+mem_heap_extra_B=9396
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=26872795
+mem_heap_B=1544676
+mem_heap_extra_B=20044
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=27351025
+mem_heap_B=1563260
+mem_heap_extra_B=24924
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=27797802
+mem_heap_B=1544492
+mem_heap_extra_B=12252
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=28468380
+mem_heap_B=1547044
+mem_heap_extra_B=12868
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=29267810
+mem_heap_B=1576366
+mem_heap_extra_B=14914
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=29934139
+mem_heap_B=1592731
+mem_heap_extra_B=15325
+mem_stacks_B=0
+heap_tree=detailed
+n7: 1592731 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1048576 0x60F8F41: atermpp::detail::initialise_aterm_administration() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_atermpp.so)
+  n1: 1048576 0x60E38B9: _GLOBAL__sub_I_function_symbol.cpp (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_atermpp.so)
+   n1: 1048576 0x40106B8: call_init.part.0 (dl-init.c:72)
+    n1: 1048576 0x40107C9: _dl_init (dl-init.c:30)
+     n1: 1048576 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+      n1: 1048576 0x3: ???
+       n1: 1048576 0xFFEFFFF39: ???
+        n1: 1048576 0xFFEFFFF6C: ???
+         n1: 1048576 0xFFEFFFF75: ???
+          n1: 1048576 0xFFEFFFF7E: ???
+           n0: 1048576 0xFFEFFFF86: ???
+ n2: 180080 0x60F8302: atermpp::detail::allocate_block(unsigned long) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_atermpp.so)
+  n8: 163696 0x41BF23: atermpp::detail::allocate_term(unsigned long) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+   n2: 32768 0x422C76: atermpp::detail::_aterm* atermpp::detail::term_appl3<atermpp::aterm>(atermpp::function_symbol const&, atermpp::aterm const&, atermpp::aterm const&, atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+    n1: 16384 0x5E722B8: mcrl2::core::detail::default_value_DataVarId() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+     n1: 16384 0x5E7294F: mcrl2::core::detail::default_value_StateOr() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+      n1: 16384 0x5E607A2: _GLOBAL__sub_I_core.cpp (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+       n1: 16384 0x40106B8: call_init.part.0 (dl-init.c:72)
+        n1: 16384 0x40107C9: _dl_init (dl-init.c:30)
+         n1: 16384 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+          n1: 16384 0x3: ???
+           n1: 16384 0xFFEFFFF39: ???
+            n1: 16384 0xFFEFFFF6C: ???
+             n1: 16384 0xFFEFFFF75: ???
+              n1: 16384 0xFFEFFFF7E: ???
+               n0: 16384 0xFFEFFFF86: ???
+    n1: 16384 0x422FB2: mcrl2::data::application::application(mcrl2::data::data_expression const&, mcrl2::data::data_expression const&, mcrl2::data::data_expression const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+     n1: 16384 0x4F10E00: mcrl2::data::less_equal(mcrl2::data::data_expression const&, mcrl2::data::data_expression const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+      n1: 16384 0x4F2EE85: mcrl2::data::standard_generate_equations_code(mcrl2::data::sort_expression const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+       n1: 16384 0x4F58077: mcrl2::data::data_specification::find_associated_system_defined_data_types_for_a_sort(mcrl2::data::sort_expression const&, std::set<mcrl2::data::function_symbol, std::less<mcrl2::data::function_symbol>, std::allocator<mcrl2::data::function_symbol> >&, std::set<mcrl2::data::function_symbol, std::less<mcrl2::data::function_symbol>, std::allocator<mcrl2::data::function_symbol> >&, std::set<mcrl2::data::data_equation, std::less<mcrl2::data::data_equation>, std::allocator<mcrl2::data::data_equation> >&, bool) const (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+        n1: 16384 0x4F594A7: mcrl2::data::data_specification::import_data_type_for_system_defined_sort(mcrl2::data::sort_expression const&) const (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+         n1: 16384 0x4F598DA: mcrl2::data::data_specification::add_data_types_for_sorts() const (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+          n1: 16384 0x4F6F990: void mcrl2::lps::resolve_summand_variable_name_clashes<mcrl2::lps::stochastic_specification>(mcrl2::lps::stochastic_specification&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+           n1: 16384 0x4ECF29A: mcrl2::lts::lps2lts_algorithm::initialise_lts_generation(mcrl2::lts::lts_generation_options*) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+            n1: 16384 0x44B078: lps2lts_tool::run() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+             n1: 16384 0x44B5C4: mcrl2::utilities::tools::tool::execute(int, char**) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+              n0: 16384 0x419BED: main (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+   n2: 32736 0x42324C: atermpp::detail::_aterm* atermpp::detail::term_appl4<atermpp::aterm>(atermpp::function_symbol const&, atermpp::aterm const&, atermpp::aterm const&, atermpp::aterm const&, atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+    n1: 16368 0x5E75847: mcrl2::core::detail::default_value_DataSpec() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+     n1: 16368 0x5E60AC0: _GLOBAL__sub_I_core.cpp (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+      n1: 16368 0x40106B8: call_init.part.0 (dl-init.c:72)
+       n1: 16368 0x40107C9: _dl_init (dl-init.c:30)
+        n1: 16368 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+         n1: 16368 0x3: ???
+          n1: 16368 0xFFEFFFF39: ???
+           n1: 16368 0xFFEFFFF6C: ???
+            n1: 16368 0xFFEFFFF75: ???
+             n1: 16368 0xFFEFFFF7E: ???
+              n0: 16368 0xFFEFFFF86: ???
+    n1: 16368 0x4EC981E: mcrl2::data::data_equation::data_equation<atermpp::term_list<mcrl2::data::variable> >(atermpp::term_list<mcrl2::data::variable> const&, mcrl2::data::data_expression const&, mcrl2::data::data_expression const&, atermpp::enable_if_container<atermpp::term_list<mcrl2::data::variable>, mcrl2::data::variable>::type*) [clone .constprop.2190] (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+     n1: 16368 0x4F119FC: mcrl2::data::sort_bool::bool_generate_equations_code() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+      n1: 16368 0x4F583BA: mcrl2::data::data_specification::find_associated_system_defined_data_types_for_a_sort(mcrl2::data::sort_expression const&, std::set<mcrl2::data::function_symbol, std::less<mcrl2::data::function_symbol>, std::allocator<mcrl2::data::function_symbol> >&, std::set<mcrl2::data::function_symbol, std::less<mcrl2::data::function_symbol>, std::allocator<mcrl2::data::function_symbol> >&, std::set<mcrl2::data::data_equation, std::less<mcrl2::data::data_equation>, std::allocator<mcrl2::data::data_equation> >&, bool) const (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+       n1: 16368 0x4F594A7: mcrl2::data::data_specification::import_data_type_for_system_defined_sort(mcrl2::data::sort_expression const&) const (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+        n1: 16368 0x4F598DA: mcrl2::data::data_specification::add_data_types_for_sorts() const (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+         n1: 16368 0x4F6F990: void mcrl2::lps::resolve_summand_variable_name_clashes<mcrl2::lps::stochastic_specification>(mcrl2::lps::stochastic_specification&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+          n1: 16368 0x4ECF29A: mcrl2::lts::lps2lts_algorithm::initialise_lts_generation(mcrl2::lts::lts_generation_options*) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+           n1: 16368 0x44B078: lps2lts_tool::run() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+            n1: 16368 0x44B5C4: mcrl2::utilities::tools::tool::execute(int, char**) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+             n0: 16368 0x419BED: main (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+   n1: 16376 0x4213B1: atermpp::detail::_aterm* atermpp::detail::term_appl2<atermpp::aterm>(atermpp::function_symbol const&, atermpp::aterm const&, atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+    n1: 16376 0x5E6EADC: mcrl2::core::detail::default_value_BooleanOr() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+     n1: 16376 0x5E60775: _GLOBAL__sub_I_core.cpp (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+      n1: 16376 0x40106B8: call_init.part.0 (dl-init.c:72)
+       n1: 16376 0x40107C9: _dl_init (dl-init.c:30)
+        n1: 16376 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+         n1: 16376 0x3: ???
+          n1: 16376 0xFFEFFFF39: ???
+           n1: 16376 0xFFEFFFF6C: ???
+            n1: 16376 0xFFEFFFF75: ???
+             n1: 16376 0xFFEFFFF7E: ???
+              n0: 16376 0xFFEFFFF86: ???
+   n1: 16376 0x431B73: atermpp::detail::_aterm* atermpp::detail::local_term_appl_with_converter<atermpp::aterm, atermpp::term_appl_iterator<atermpp::aterm>, atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::term_appl<atermpp::aterm> const&)::{lambda(atermpp::aterm const&)#1}>(atermpp::function_symbol const&, atermpp::term_appl_iterator<atermpp::aterm>, atermpp::function_symbol const&, atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::term_appl<atermpp::aterm> const&)::{lambda(atermpp::aterm const&)#1} const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+    n1: 16376 0x431CC9: atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder>::apply(atermpp::term_appl<atermpp::aterm> const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+     n1: 16376 0x431933: atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+      n1: 16376 0x43172A: atermpp::detail::_aterm* atermpp::detail::make_list_forward<atermpp::aterm, atermpp::term_list_iterator<atermpp::aterm>, atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::term_list<atermpp::aterm> const&)::{lambda(atermpp::aterm const&)#1}>(atermpp::term_list_iterator<atermpp::aterm>, atermpp::detail::_aterm*, atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::term_list<atermpp::aterm> const&)::{lambda(atermpp::aterm const&)#1} const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+       n1: 16376 0x43198B: atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+        n1: 16376 0x431A96: atermpp::detail::_aterm* atermpp::detail::local_term_appl_with_converter<atermpp::aterm, atermpp::term_appl_iterator<atermpp::aterm>, atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::term_appl<atermpp::aterm> const&)::{lambda(atermpp::aterm const&)#1}>(atermpp::function_symbol const&, atermpp::term_appl_iterator<atermpp::aterm>, atermpp::function_symbol const&, atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::term_appl<atermpp::aterm> const&)::{lambda(atermpp::aterm const&)#1} const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+         n1: 16376 0x431CC9: atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder>::apply(atermpp::term_appl<atermpp::aterm> const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+          n1: 16376 0x431933: atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+           n1: 16376 0x43172A: atermpp::detail::_aterm* atermpp::detail::make_list_forward<atermpp::aterm, atermpp::term_list_iterator<atermpp::aterm>, atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::term_list<atermpp::aterm> const&)::{lambda(atermpp::aterm const&)#1}>(atermpp::term_list_iterator<atermpp::aterm>, atermpp::detail::_aterm*, atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::term_list<atermpp::aterm> const&)::{lambda(atermpp::aterm const&)#1} const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+            n1: 16376 0x43198B: atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+             n1: 16376 0x431A96: atermpp::detail::_aterm* atermpp::detail::local_term_appl_with_converter<atermpp::aterm, atermpp::term_appl_iterator<atermpp::aterm>, atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::term_appl<atermpp::aterm> const&)::{lambda(atermpp::aterm const&)#1}>(atermpp::function_symbol const&, atermpp::term_appl_iterator<atermpp::aterm>, atermpp::function_symbol const&, atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::term_appl<atermpp::aterm> const&)::{lambda(atermpp::aterm const&)#1} const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+              n1: 16376 0x431CC9: atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder>::apply(atermpp::term_appl<atermpp::aterm> const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+               n1: 16376 0x431933: atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+                n1: 16376 0x431A96: atermpp::detail::_aterm* atermpp::detail::local_term_appl_with_converter<atermpp::aterm, atermpp::term_appl_iterator<atermpp::aterm>, atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::term_appl<atermpp::aterm> const&)::{lambda(atermpp::aterm const&)#1}>(atermpp::function_symbol const&, atermpp::term_appl_iterator<atermpp::aterm>, atermpp::function_symbol const&, atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::term_appl<atermpp::aterm> const&)::{lambda(atermpp::aterm const&)#1} const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+                 n1: 16376 0x431CC9: atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder>::apply(atermpp::term_appl<atermpp::aterm> const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+                  n1: 16376 0x431933: atermpp::builder<atermpp::detail::cached_bottom_up_replace_aterm_builder<atermpp::builder, mcrl2::data::detail::index_adder> >::apply(atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+                   n1: 16376 0x4489DA: mcrl2::lps::specification_base<mcrl2::lps::stochastic_linear_process, mcrl2::lps::stochastic_process_initializer>::load(std::istream&, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+                    n1: 16376 0x44ACC9: void mcrl2::lps::load_lps<mcrl2::lps::stochastic_specification>(mcrl2::lps::stochastic_specification&, std::istream&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+                     n1: 16376 0x44AEAC: void mcrl2::lps::load_lps<mcrl2::lps::stochastic_specification>(mcrl2::lps::stochastic_specification&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+                      n1: 16376 0x44B000: lps2lts_tool::run() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+                       n1: 16376 0x44B5C4: mcrl2::utilities::tools::tool::execute(int, char**) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+                        n0: 16376 0x419BED: main (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+   n1: 16376 0x5AE7D4E: atermpp::detail::_aterm* atermpp::detail::term_appl2<atermpp::aterm>(atermpp::function_symbol const&, atermpp::aterm const&, atermpp::aterm const&) [clone .constprop.922] (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+    n1: 16376 0x5AED346: mcrl2::data::detail::RewriterJitty::RewriterJitty(mcrl2::data::data_specification const&, mcrl2::data::used_data_equation_selector const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+     n1: 16376 0x5A3F8D7: mcrl2::data::detail::RewriterCompilingJitty::RewriterCompilingJitty(mcrl2::data::data_specification const&, mcrl2::data::used_data_equation_selector const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+      n1: 16376 0x5AD3CB1: mcrl2::data::detail::createRewriter(mcrl2::data::data_specification const&, mcrl2::data::used_data_equation_selector const&, mcrl2::data::rewrite_strategy) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+       n1: 16376 0x4ECF66F: mcrl2::lts::lps2lts_algorithm::initialise_lts_generation(mcrl2::lts::lts_generation_options*) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+        n1: 16376 0x44B078: lps2lts_tool::run() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+         n1: 16376 0x44B5C4: mcrl2::utilities::tools::tool::execute(int, char**) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+          n0: 16376 0x419BED: main (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+   n1: 16368 0x5E6B540: mcrl2::core::detail::default_value_Number() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+    n1: 16368 0x5E7228F: mcrl2::core::detail::default_value_DataVarId() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+     n1: 16368 0x5E7294F: mcrl2::core::detail::default_value_StateOr() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+      n1: 16368 0x5E607A2: _GLOBAL__sub_I_core.cpp (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+       n1: 16368 0x40106B8: call_init.part.0 (dl-init.c:72)
+        n1: 16368 0x40107C9: _dl_init (dl-init.c:30)
+         n1: 16368 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+          n1: 16368 0x3: ???
+           n1: 16368 0xFFEFFFF39: ???
+            n1: 16368 0xFFEFFFF6C: ???
+             n1: 16368 0xFFEFFFF75: ???
+              n1: 16368 0xFFEFFFF7E: ???
+               n0: 16368 0xFFEFFFF86: ???
+   n1: 16360 0x542B57F: atermpp::detail::_aterm* atermpp::detail::term_appl6<atermpp::aterm>(atermpp::function_symbol const&, atermpp::aterm const&, atermpp::aterm const&, atermpp::aterm const&, atermpp::aterm const&, atermpp::aterm const&, atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lps.so)
+    n1: 16360 0x5E76140: mcrl2::core::detail::default_value_LinearProcessSummand() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+     n1: 16360 0x5E60B7E: _GLOBAL__sub_I_core.cpp (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+      n1: 16360 0x40106B8: call_init.part.0 (dl-init.c:72)
+       n1: 16360 0x40107C9: _dl_init (dl-init.c:30)
+        n1: 16360 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+         n1: 16360 0x3: ???
+          n1: 16360 0xFFEFFFF39: ???
+           n1: 16360 0xFFEFFFF6C: ???
+            n1: 16360 0xFFEFFFF75: ???
+             n1: 16360 0xFFEFFFF7E: ???
+              n0: 16360 0xFFEFFFF86: ???
+   n1: 16336 0x542B767: atermpp::detail::_aterm* atermpp::detail::term_appl5<atermpp::aterm>(atermpp::function_symbol const&, atermpp::aterm const&, atermpp::aterm const&, atermpp::aterm const&, atermpp::aterm const&, atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lps.so)
+    n1: 16336 0x5E763F8: mcrl2::core::detail::default_value_LinProcSpec() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+     n1: 16336 0x5E60E04: _GLOBAL__sub_I_core.cpp (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_core.so)
+      n1: 16336 0x40106B8: call_init.part.0 (dl-init.c:72)
+       n1: 16336 0x40107C9: _dl_init (dl-init.c:30)
+        n1: 16336 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+         n1: 16336 0x3: ???
+          n1: 16336 0xFFEFFFF39: ???
+           n1: 16336 0xFFEFFFF6C: ???
+            n1: 16336 0xFFEFFFF75: ???
+             n1: 16336 0xFFEFFFF7E: ???
+              n0: 16336 0xFFEFFFF86: ???
+  n1: 16384 0x60F92C4: atermpp::detail::initialise_aterm_administration() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_atermpp.so)
+   n1: 16384 0x60E38B9: _GLOBAL__sub_I_function_symbol.cpp (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_atermpp.so)
+    n1: 16384 0x40106B8: call_init.part.0 (dl-init.c:72)
+     n1: 16384 0x40107C9: _dl_init (dl-init.c:30)
+      n1: 16384 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+       n1: 16384 0x3: ???
+        n1: 16384 0xFFEFFFF39: ???
+         n1: 16384 0xFFEFFFF6C: ???
+          n1: 16384 0xFFEFFFF75: ???
+           n1: 16384 0xFFEFFFF7E: ???
+            n0: 16384 0xFFEFFFF86: ???
+ n1: 131072 0x4ECFBFE: mcrl2::lts::lps2lts_algorithm::initialise_lts_generation(mcrl2::lts::lts_generation_options*) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+  n1: 131072 0x44B078: lps2lts_tool::run() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+   n1: 131072 0x44B5C4: mcrl2::utilities::tools::tool::execute(int, char**) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+    n0: 131072 0x419BED: main (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+ n0: 118955 in 159 places, all below massif's threshold (1.00%)
+ n1: 72704 0x664BEFE: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+  n1: 72704 0x40106B8: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x40107C9: _dl_init (dl-init.c:30)
+    n1: 72704 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+     n1: 72704 0x3: ???
+      n1: 72704 0xFFEFFFF39: ???
+       n1: 72704 0xFFEFFFF6C: ???
+        n1: 72704 0xFFEFFFF75: ???
+         n1: 72704 0xFFEFFFF7E: ???
+          n0: 72704 0xFFEFFFF86: ???
+ n1: 24960 0x6B941EE: __new_exitfn (cxa_atexit.c:101)
+  n1: 24960 0x6B94297: __cxa_atexit (cxa_atexit.c:35)
+   n0: 24960 in 24 places, all below massif's threshold (1.00%)
+ n1: 16384 0x60E5ED1: std::pair<std::__detail::_Node_iterator<std::pair<atermpp::detail::_function_symbol_primary_data const, atermpp::detail::_function_symbol_auxiliary_data>, false, true>, bool> std::_Hashtable<atermpp::detail::_function_symbol_primary_data, std::pair<atermpp::detail::_function_symbol_primary_data const, atermpp::detail::_function_symbol_auxiliary_data>, std::allocator<std::pair<atermpp::detail::_function_symbol_primary_data const, atermpp::detail::_function_symbol_auxiliary_data> >, std::__detail::_Select1st, std::equal_to<atermpp::detail::_function_symbol_primary_data>, std::hash<atermpp::detail::_function_symbol_primary_data>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_emplace<atermpp::detail::_function_symbol_primary_data, atermpp::detail::_function_symbol_auxiliary_data>(std::integral_constant<bool, true>, atermpp::detail::_function_symbol_primary_data&&, atermpp::detail::_function_symbol_auxiliary_data&&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_atermpp.so)
+  n1: 16384 0x60E46E1: atermpp::function_symbol::function_symbol(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long, bool) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_atermpp.so)
+   n0: 16384 in 169 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=28
+#-----------
+time=30594961
+mem_heap_B=1606377
+mem_heap_extra_B=15503
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=31049772
+mem_heap_B=1614666
+mem_heap_extra_B=15462
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=31469724
+mem_heap_B=1612710
+mem_heap_extra_B=15514
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=31920122
+mem_heap_B=1631357
+mem_heap_extra_B=15715
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=32339642
+mem_heap_B=1631202
+mem_heap_extra_B=15550
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=32756450
+mem_heap_B=1631376
+mem_heap_extra_B=15720
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=33175792
+mem_heap_B=1629366
+mem_heap_extra_B=15634
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=33610465
+mem_heap_B=1633641
+mem_heap_extra_B=15943
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=34033968
+mem_heap_B=1631925
+mem_heap_extra_B=15899
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=34451722
+mem_heap_B=1634145
+mem_heap_extra_B=16095
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=34918192
+mem_heap_B=1664269
+mem_heap_extra_B=15987
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=35337389
+mem_heap_B=1680770
+mem_heap_extra_B=15950
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=36078185
+mem_heap_B=1681197
+mem_heap_extra_B=16251
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=36493740
+mem_heap_B=1698827
+mem_heap_extra_B=16357
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=37077850
+mem_heap_B=1713581
+mem_heap_extra_B=16307
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=37907079
+mem_heap_B=1713158
+mem_heap_extra_B=16474
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=38326993
+mem_heap_B=1715778
+mem_heap_extra_B=16598
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=38978735
+mem_heap_B=1713141
+mem_heap_extra_B=16187
+mem_stacks_B=0
+heap_tree=detailed
+n7: 1713141 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1048576 0x60F8F41: atermpp::detail::initialise_aterm_administration() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_atermpp.so)
+  n1: 1048576 0x60E38B9: _GLOBAL__sub_I_function_symbol.cpp (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_atermpp.so)
+   n1: 1048576 0x40106B8: call_init.part.0 (dl-init.c:72)
+    n1: 1048576 0x40107C9: _dl_init (dl-init.c:30)
+     n1: 1048576 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+      n1: 1048576 0x3: ???
+       n1: 1048576 0xFFEFFFF39: ???
+        n1: 1048576 0xFFEFFFF6C: ???
+         n1: 1048576 0xFFEFFFF75: ???
+          n1: 1048576 0xFFEFFFF7E: ???
+           n0: 1048576 0xFFEFFFF86: ???
+ n2: 245592 0x60F8302: atermpp::detail::allocate_block(unsigned long) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_atermpp.so)
+  n5: 229208 0x41BF23: atermpp::detail::allocate_term(unsigned long) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+   n0: 98200 in 6 places, all below massif's threshold (1.00%)
+   n1: 32768 0x422C76: atermpp::detail::_aterm* atermpp::detail::term_appl3<atermpp::aterm>(atermpp::function_symbol const&, atermpp::aterm const&, atermpp::aterm const&, atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+    n0: 32768 in 2 places, all below massif's threshold (1.00%)
+   n1: 32752 0x4213B1: atermpp::detail::_aterm* atermpp::detail::term_appl2<atermpp::aterm>(atermpp::function_symbol const&, atermpp::aterm const&, atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+    n0: 32752 in 2 places, all below massif's threshold (1.00%)
+   n1: 32752 0x5A310FE: atermpp::detail::_aterm* atermpp::detail::term_appl2<atermpp::aterm>(atermpp::function_symbol const&, atermpp::aterm const&, atermpp::aterm const&) [clone .constprop.1099] (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+    n0: 32752 in 2 places, all below massif's threshold (1.00%)
+   n1: 32736 0x42324C: atermpp::detail::_aterm* atermpp::detail::term_appl4<atermpp::aterm>(atermpp::function_symbol const&, atermpp::aterm const&, atermpp::aterm const&, atermpp::aterm const&, atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+    n0: 32736 in 2 places, all below massif's threshold (1.00%)
+  n0: 16384 in 1 place, below massif's threshold (1.00%)
+ n1: 131072 0x4ECFBFE: mcrl2::lts::lps2lts_algorithm::initialise_lts_generation(mcrl2::lts::lts_generation_options*) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+  n1: 131072 0x44B078: lps2lts_tool::run() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+   n1: 131072 0x44B5C4: mcrl2::utilities::tools::tool::execute(int, char**) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+    n0: 131072 0x419BED: main (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+ n0: 123660 in 167 places, all below massif's threshold (1.00%)
+ n1: 72704 0x664BEFE: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+  n1: 72704 0x40106B8: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x40107C9: _dl_init (dl-init.c:30)
+    n1: 72704 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+     n1: 72704 0x3: ???
+      n1: 72704 0xFFEFFFF39: ???
+       n1: 72704 0xFFEFFFF6C: ???
+        n1: 72704 0xFFEFFFF75: ???
+         n1: 72704 0xFFEFFFF7E: ???
+          n0: 72704 0xFFEFFFF86: ???
+ n1: 65537 0x66E187B: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::reserve(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+  n1: 65537 0x66D5CD3: std::__cxx11::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >::overflow(int) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+   n2: 65537 0x66DFE77: std::basic_streambuf<char, std::char_traits<char> >::xsputn(char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+    n2: 65537 0x66D0EC4: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+     n1: 65537 0x5AC58EE: mcrl2::data::detail::RewriterCompilingJitty::ImplementTree::implement_strategy(std::ostream&, atermpp::term_list<mcrl2::data::detail::match_tree>, unsigned long, mcrl2::data::function_symbol const&, mcrl2::data::detail::bracket_level_data&, std::stack<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+      n1: 65537 0x5AC94F3: mcrl2::data::detail::RewriterCompilingJitty::ImplementTree::rewr_function_implementation(std::ostream&, mcrl2::data::function_symbol const&, unsigned long, atermpp::term_list<mcrl2::data::detail::match_tree>) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+       n1: 65537 0x5A3C588: mcrl2::data::detail::RewriterCompilingJitty::generate_code(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+        n1: 65537 0x5A3DB1F: mcrl2::data::detail::RewriterCompilingJitty::BuildRewriteSystem() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+         n1: 65537 0x5A3FC39: mcrl2::data::detail::RewriterCompilingJitty::RewriterCompilingJitty(mcrl2::data::data_specification const&, mcrl2::data::used_data_equation_selector const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+          n1: 65537 0x5AD3CB1: mcrl2::data::detail::createRewriter(mcrl2::data::data_specification const&, mcrl2::data::used_data_equation_selector const&, mcrl2::data::rewrite_strategy) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+           n1: 65537 0x4ECF66F: mcrl2::lts::lps2lts_algorithm::initialise_lts_generation(mcrl2::lts::lts_generation_options*) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+            n1: 65537 0x44B078: lps2lts_tool::run() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+             n1: 65537 0x44B5C4: mcrl2::utilities::tools::tool::execute(int, char**) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+              n0: 65537 0x419BED: main (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+     n0: 0 in 38 places, all below massif's threshold (1.00%)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n1: 26000 0x6B941EE: __new_exitfn (cxa_atexit.c:101)
+  n1: 26000 0x6B94297: __cxa_atexit (cxa_atexit.c:35)
+   n0: 26000 in 25 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=46
+#-----------
+time=39402411
+mem_heap_B=1714549
+mem_heap_extra_B=16363
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=40022100
+mem_heap_B=1845354
+mem_heap_extra_B=16510
+mem_stacks_B=0
+heap_tree=detailed
+n7: 1845354 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1048576 0x60F8F41: atermpp::detail::initialise_aterm_administration() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_atermpp.so)
+  n1: 1048576 0x60E38B9: _GLOBAL__sub_I_function_symbol.cpp (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_atermpp.so)
+   n1: 1048576 0x40106B8: call_init.part.0 (dl-init.c:72)
+    n1: 1048576 0x40107C9: _dl_init (dl-init.c:30)
+     n1: 1048576 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+      n1: 1048576 0x3: ???
+       n1: 1048576 0xFFEFFFF39: ???
+        n1: 1048576 0xFFEFFFF6C: ???
+         n1: 1048576 0xFFEFFFF75: ???
+          n1: 1048576 0xFFEFFFF7E: ???
+           n0: 1048576 0xFFEFFFF86: ???
+ n2: 245592 0x60F8302: atermpp::detail::allocate_block(unsigned long) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_atermpp.so)
+  n5: 229208 0x41BF23: atermpp::detail::allocate_term(unsigned long) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+   n0: 98200 in 6 places, all below massif's threshold (1.00%)
+   n1: 32768 0x422C76: atermpp::detail::_aterm* atermpp::detail::term_appl3<atermpp::aterm>(atermpp::function_symbol const&, atermpp::aterm const&, atermpp::aterm const&, atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+    n0: 32768 in 2 places, all below massif's threshold (1.00%)
+   n1: 32752 0x4213B1: atermpp::detail::_aterm* atermpp::detail::term_appl2<atermpp::aterm>(atermpp::function_symbol const&, atermpp::aterm const&, atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+    n0: 32752 in 2 places, all below massif's threshold (1.00%)
+   n1: 32752 0x5A310FE: atermpp::detail::_aterm* atermpp::detail::term_appl2<atermpp::aterm>(atermpp::function_symbol const&, atermpp::aterm const&, atermpp::aterm const&) [clone .constprop.1099] (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+    n0: 32752 in 2 places, all below massif's threshold (1.00%)
+   n1: 32736 0x42324C: atermpp::detail::_aterm* atermpp::detail::term_appl4<atermpp::aterm>(atermpp::function_symbol const&, atermpp::aterm const&, atermpp::aterm const&, atermpp::aterm const&, atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+    n0: 32736 in 2 places, all below massif's threshold (1.00%)
+  n0: 16384 in 1 place, below massif's threshold (1.00%)
+ n1: 196610 0x66E187B: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::reserve(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+  n1: 196610 0x66D5CD3: std::__cxx11::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >::overflow(int) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+   n2: 196610 0x66DFE77: std::basic_streambuf<char, std::char_traits<char> >::xsputn(char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+    n3: 196610 0x66D0EC4: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+     n1: 131073 0x5AC51B5: mcrl2::data::detail::RewriterCompilingJitty::ImplementTree::implement_strategy(std::ostream&, atermpp::term_list<mcrl2::data::detail::match_tree>, unsigned long, mcrl2::data::function_symbol const&, mcrl2::data::detail::bracket_level_data&, std::stack<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+      n1: 131073 0x5AC94F3: mcrl2::data::detail::RewriterCompilingJitty::ImplementTree::rewr_function_implementation(std::ostream&, mcrl2::data::function_symbol const&, unsigned long, atermpp::term_list<mcrl2::data::detail::match_tree>) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+       n1: 131073 0x5A3C588: mcrl2::data::detail::RewriterCompilingJitty::generate_code(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+        n1: 131073 0x5A3DB1F: mcrl2::data::detail::RewriterCompilingJitty::BuildRewriteSystem() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+         n1: 131073 0x5A3FC39: mcrl2::data::detail::RewriterCompilingJitty::RewriterCompilingJitty(mcrl2::data::data_specification const&, mcrl2::data::used_data_equation_selector const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+          n1: 131073 0x5AD3CB1: mcrl2::data::detail::createRewriter(mcrl2::data::data_specification const&, mcrl2::data::used_data_equation_selector const&, mcrl2::data::rewrite_strategy) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+           n1: 131073 0x4ECF66F: mcrl2::lts::lps2lts_algorithm::initialise_lts_generation(mcrl2::lts::lts_generation_options*) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+            n1: 131073 0x44B078: lps2lts_tool::run() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+             n1: 131073 0x44B5C4: mcrl2::utilities::tools::tool::execute(int, char**) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+              n0: 131073 0x419BED: main (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+     n1: 65537 0x5AC58EE: mcrl2::data::detail::RewriterCompilingJitty::ImplementTree::implement_strategy(std::ostream&, atermpp::term_list<mcrl2::data::detail::match_tree>, unsigned long, mcrl2::data::function_symbol const&, mcrl2::data::detail::bracket_level_data&, std::stack<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+      n1: 65537 0x5AC94F3: mcrl2::data::detail::RewriterCompilingJitty::ImplementTree::rewr_function_implementation(std::ostream&, mcrl2::data::function_symbol const&, unsigned long, atermpp::term_list<mcrl2::data::detail::match_tree>) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+       n1: 65537 0x5A3C588: mcrl2::data::detail::RewriterCompilingJitty::generate_code(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+        n1: 65537 0x5A3DB1F: mcrl2::data::detail::RewriterCompilingJitty::BuildRewriteSystem() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+         n1: 65537 0x5A3FC39: mcrl2::data::detail::RewriterCompilingJitty::RewriterCompilingJitty(mcrl2::data::data_specification const&, mcrl2::data::used_data_equation_selector const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+          n1: 65537 0x5AD3CB1: mcrl2::data::detail::createRewriter(mcrl2::data::data_specification const&, mcrl2::data::used_data_equation_selector const&, mcrl2::data::rewrite_strategy) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+           n1: 65537 0x4ECF66F: mcrl2::lts::lps2lts_algorithm::initialise_lts_generation(mcrl2::lts::lts_generation_options*) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+            n1: 65537 0x44B078: lps2lts_tool::run() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+             n1: 65537 0x44B5C4: mcrl2::utilities::tools::tool::execute(int, char**) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+              n0: 65537 0x419BED: main (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+     n0: 0 in 38 places, all below massif's threshold (1.00%)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n1: 131072 0x4ECFBFE: mcrl2::lts::lps2lts_algorithm::initialise_lts_generation(mcrl2::lts::lts_generation_options*) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+  n1: 131072 0x44B078: lps2lts_tool::run() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+   n1: 131072 0x44B5C4: mcrl2::utilities::tools::tool::execute(int, char**) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+    n0: 131072 0x419BED: main (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+ n0: 124800 in 167 places, all below massif's threshold (1.00%)
+ n1: 72704 0x664BEFE: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+  n1: 72704 0x40106B8: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x40107C9: _dl_init (dl-init.c:30)
+    n1: 72704 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+     n1: 72704 0x3: ???
+      n1: 72704 0xFFEFFFF39: ???
+       n1: 72704 0xFFEFFFF6C: ???
+        n1: 72704 0xFFEFFFF75: ???
+         n1: 72704 0xFFEFFFF7E: ???
+          n0: 72704 0xFFEFFFF86: ???
+ n1: 26000 0x6B941EE: __new_exitfn (cxa_atexit.c:101)
+  n1: 26000 0x6B94297: __cxa_atexit (cxa_atexit.c:35)
+   n0: 26000 in 25 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=48
+#-----------
+time=40650121
+mem_heap_B=1780077
+mem_heap_extra_B=16491
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=41277003
+mem_heap_B=1781776
+mem_heap_extra_B=16728
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=41649480
+mem_heap_B=1780805
+mem_heap_extra_B=16723
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=42018725
+mem_heap_B=1781143
+mem_heap_extra_B=16753
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=42382395
+mem_heap_B=1781007
+mem_heap_extra_B=16769
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=42621050
+mem_heap_B=1866209
+mem_heap_extra_B=16743
+mem_stacks_B=0
+heap_tree=peak
+n8: 1866209 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1048576 0x60F8F41: atermpp::detail::initialise_aterm_administration() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_atermpp.so)
+  n1: 1048576 0x60E38B9: _GLOBAL__sub_I_function_symbol.cpp (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_atermpp.so)
+   n1: 1048576 0x40106B8: call_init.part.0 (dl-init.c:72)
+    n1: 1048576 0x40107C9: _dl_init (dl-init.c:30)
+     n1: 1048576 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+      n1: 1048576 0x3: ???
+       n1: 1048576 0xFFEFFFF39: ???
+        n1: 1048576 0xFFEFFFF6C: ???
+         n1: 1048576 0xFFEFFFF75: ???
+          n1: 1048576 0xFFEFFFF7E: ???
+           n0: 1048576 0xFFEFFFF86: ???
+ n2: 245592 0x60F8302: atermpp::detail::allocate_block(unsigned long) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_atermpp.so)
+  n5: 229208 0x41BF23: atermpp::detail::allocate_term(unsigned long) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+   n0: 98200 in 6 places, all below massif's threshold (1.00%)
+   n1: 32768 0x422C76: atermpp::detail::_aterm* atermpp::detail::term_appl3<atermpp::aterm>(atermpp::function_symbol const&, atermpp::aterm const&, atermpp::aterm const&, atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+    n0: 32768 in 2 places, all below massif's threshold (1.00%)
+   n1: 32752 0x4213B1: atermpp::detail::_aterm* atermpp::detail::term_appl2<atermpp::aterm>(atermpp::function_symbol const&, atermpp::aterm const&, atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+    n0: 32752 in 2 places, all below massif's threshold (1.00%)
+   n1: 32752 0x5A310FE: atermpp::detail::_aterm* atermpp::detail::term_appl2<atermpp::aterm>(atermpp::function_symbol const&, atermpp::aterm const&, atermpp::aterm const&) [clone .constprop.1099] (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+    n0: 32752 in 2 places, all below massif's threshold (1.00%)
+   n1: 32736 0x42324C: atermpp::detail::_aterm* atermpp::detail::term_appl4<atermpp::aterm>(atermpp::function_symbol const&, atermpp::aterm const&, atermpp::aterm const&, atermpp::aterm const&, atermpp::aterm const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+    n0: 32736 in 2 places, all below massif's threshold (1.00%)
+  n0: 16384 in 1 place, below massif's threshold (1.00%)
+ n1: 131073 0x66E187B: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::reserve(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+  n1: 131073 0x66D5CD3: std::__cxx11::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >::overflow(int) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+   n2: 131073 0x66DFE77: std::basic_streambuf<char, std::char_traits<char> >::xsputn(char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+    n2: 131073 0x66D0EC4: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+     n1: 131073 0x5AC51B5: mcrl2::data::detail::RewriterCompilingJitty::ImplementTree::implement_strategy(std::ostream&, atermpp::term_list<mcrl2::data::detail::match_tree>, unsigned long, mcrl2::data::function_symbol const&, mcrl2::data::detail::bracket_level_data&, std::stack<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+      n1: 131073 0x5AC94F3: mcrl2::data::detail::RewriterCompilingJitty::ImplementTree::rewr_function_implementation(std::ostream&, mcrl2::data::function_symbol const&, unsigned long, atermpp::term_list<mcrl2::data::detail::match_tree>) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+       n1: 131073 0x5A3C588: mcrl2::data::detail::RewriterCompilingJitty::generate_code(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+        n1: 131073 0x5A3DB1F: mcrl2::data::detail::RewriterCompilingJitty::BuildRewriteSystem() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+         n1: 131073 0x5A3FC39: mcrl2::data::detail::RewriterCompilingJitty::RewriterCompilingJitty(mcrl2::data::data_specification const&, mcrl2::data::used_data_equation_selector const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+          n1: 131073 0x5AD3CB1: mcrl2::data::detail::createRewriter(mcrl2::data::data_specification const&, mcrl2::data::used_data_equation_selector const&, mcrl2::data::rewrite_strategy) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+           n1: 131073 0x4ECF66F: mcrl2::lts::lps2lts_algorithm::initialise_lts_generation(mcrl2::lts::lts_generation_options*) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+            n1: 131073 0x44B078: lps2lts_tool::run() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+             n1: 131073 0x44B5C4: mcrl2::utilities::tools::tool::execute(int, char**) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+              n0: 131073 0x419BED: main (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+     n0: 0 in 39 places, all below massif's threshold (1.00%)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n1: 131072 0x4ECFBFE: mcrl2::lts::lps2lts_algorithm::initialise_lts_generation(mcrl2::lts::lts_generation_options*) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+  n1: 131072 0x44B078: lps2lts_tool::run() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+   n1: 131072 0x44B5C4: mcrl2::utilities::tools::tool::execute(int, char**) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+    n0: 131072 0x419BED: main (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+ n0: 123848 in 167 places, all below massif's threshold (1.00%)
+ n1: 87344 0x66D4EEB: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+  n2: 87344 0x66D5745: std::__cxx11::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >::str() const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+   n1: 87315 0x5A3C790: mcrl2::data::detail::RewriterCompilingJitty::generate_code(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+    n1: 87315 0x5A3DB1F: mcrl2::data::detail::RewriterCompilingJitty::BuildRewriteSystem() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+     n1: 87315 0x5A3FC39: mcrl2::data::detail::RewriterCompilingJitty::RewriterCompilingJitty(mcrl2::data::data_specification const&, mcrl2::data::used_data_equation_selector const&) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+      n1: 87315 0x5AD3CB1: mcrl2::data::detail::createRewriter(mcrl2::data::data_specification const&, mcrl2::data::used_data_equation_selector const&, mcrl2::data::rewrite_strategy) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_data.so)
+       n1: 87315 0x4ECF66F: mcrl2::lts::lps2lts_algorithm::initialise_lts_generation(mcrl2::lts::lts_generation_options*) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/lib/libmcrl2_lts.so)
+        n1: 87315 0x44B078: lps2lts_tool::run() (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+         n1: 87315 0x44B5C4: mcrl2::utilities::tools::tool::execute(int, char**) (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+          n0: 87315 0x419BED: main (in /home/gkarlos/workspaces/mcrl2-perf/mcrl2-release/mcrl2/build/stage/bin/lps2lts)
+   n0: 29 in 22 places, all below massif's threshold (1.00%)
+ n1: 72704 0x664BEFE: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+  n1: 72704 0x40106B8: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x40107C9: _dl_init (dl-init.c:30)
+    n1: 72704 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+     n1: 72704 0x3: ???
+      n1: 72704 0xFFEFFFF39: ???
+       n1: 72704 0xFFEFFFF6C: ???
+        n1: 72704 0xFFEFFFF75: ???
+         n1: 72704 0xFFEFFFF7E: ???
+          n0: 72704 0xFFEFFFF86: ???
+ n1: 26000 0x6B941EE: __new_exitfn (cxa_atexit.c:101)
+  n1: 26000 0x6B94297: __cxa_atexit (cxa_atexit.c:35)
+   n0: 26000 in 25 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=54
+#-----------
+time=42984176
+mem_heap_B=1779407
+mem_heap_extra_B=16745
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=43349553
+mem_heap_B=1779407
+mem_heap_extra_B=16745
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=43712155
+mem_heap_B=1631210
+mem_heap_extra_B=14710
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=44075500
+mem_heap_B=1641278
+mem_heap_extra_B=15402
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=44446046
+mem_heap_B=1664962
+mem_heap_extra_B=15990
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=44808549
+mem_heap_B=1658722
+mem_heap_extra_B=15550
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=45180362
+mem_heap_B=1661538
+mem_heap_extra_B=15830
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=45542900
+mem_heap_B=1664106
+mem_heap_extra_B=16086
+mem_stacks_B=0
+heap_tree=empty

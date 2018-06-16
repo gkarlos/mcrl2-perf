@@ -1,2 +1,2 @@
 # mcrl2-perf
-Analyzing the performane of mCRL2
+Measuring the performance of mCRL2
