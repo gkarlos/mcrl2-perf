@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import pprint
 from matplotlib import rcParams
 rcParams.update({'figure.autolayout': True})
-rcParams.update({'figure.figsize': (10, 6)})
+rcParams.update({'figure.figsize': (10, 7)})
 
 resultsdir = sys.argv[1]
 
