@@ -93,7 +93,9 @@ for allocator in allocators:
         means = [ data[allocator][test][flag]['usr+sys'][T_MEAN] / 1000 for test in tests ]
         sds   = [ data[allocator][test][flag]['usr+sys'][T_SD]   / 1000 for test in tests ]
         ax.bar(y_pos + offset, means, width= w - (w / barspertest), align='edge', \
-            color=colors[allocator][flag], label="%s || %s" % ( "libc_malloc" if allocator == "default" else allocator, flag), yerr=sds, error_kw=error_config,  ecolor='gray')
+            color=colors[allocator][flag], label="%s || %s" % \
+            ( "libc_malloc" if allocator == "default" else allocator, flag), yerr=sds, \
+            error_kw=error_config, linewidth=0.2, edgecolor="black")
 
         offset = offset + w
 
