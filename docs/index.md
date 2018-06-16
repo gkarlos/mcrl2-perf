@@ -25,6 +25,8 @@ In this benchmark we measure raw time for the **lps2lts** tool on different inpu
 - [TCmalloc](http://goog-perftools.sourceforge.net/doc/tcmalloc.html)
 - [JEmalloc](http://jemalloc.net/)
 
+TCmalloc and JEmalloc shared libraries are preloaded with the `LD_PRELOAD` mechanism.
+
 ![benchmark-lps2lts_allocators-small-plot](https://raw.githubusercontent.com/gkarlos/mcrl2-perf/master/docs/images/plots/allocators-small.png)
 
 ![benchmark-lps2lps2lts_allocators-medium-plot](https://raw.githubusercontent.com/gkarlos/mcrl2-perf/master/docs/images/plots/allocators-medium.png)
