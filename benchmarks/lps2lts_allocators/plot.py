@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import pprint
 from matplotlib import rcParams
 rcParams.update({'figure.autolayout': True})
-rcParams.update({'figure.figsize': (10,5)})
+rcParams.update({'figure.figsize': (10, 6)})
 
 resultsdir = sys.argv[1]
 
@@ -29,16 +29,12 @@ allocators = ['default', 'jemalloc', 'tcmalloc']
 flags      = ['-default', '-rjittyc', '-rjittyc --cached --prune']
 tests      = [d.split('.')[0] for d in os.listdir(resultsdir)]
 
-print "FILES: ", tests
 data = {}
 size = resultsdir.split('-')[1]
-
-print "SIZE %s" % size
 
 def print_data():
     pp = pprint.PrettyPrinter(depth=5, width=120)
     pp.pprint(data)
-
 
 
 for allocator in allocators:
