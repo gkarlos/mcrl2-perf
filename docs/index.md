@@ -16,6 +16,7 @@ Max heap usage is measure with valgrind massif.
 
 ![benchmark-lps2lts_time_memory-medium-plot](https://raw.githubusercontent.com/gkarlos/mcrl2-perf/master/docs/images/plots/time-memory-medium.png)
 
+
 <span id="benchmark-lps2lts_allocators"></span>
 
 ### lps2lts allocators
