@@ -4,23 +4,40 @@
 #include "mcrl2/lts/lts.h"
 #include "mcrl2/lts/lts_lts.h"
 #include "mcrl2/lts/lts_type.h"
+#include "mcrl2/atermpp/detail/aterm.h"
+
 
 using namespace std;
+using namespace mcrl2::lts;
 
+using namespace atermpp;
+
+void print_lts_info(lts_lts_t& l)
+{
+  cout << "#states: " << l.num_states() << endl;
+  cout << "#has state labels: " << (l.has_state_info()? "yes" : "no") << endl;
+}
 
 void make_color_lts()
 {
-  using namespace mcrl2::lts;
 
   // Create the labelled transition system l.
   lts_lts_t l;
+
+  print_lts_info(l);
+
+
+  aterm_int x(10);
+
+  state_label_lts sl;
+
+  cout << pp(sl) << endl;
+  cout << x << endl;
   // for ( int i = 0; i < 26; ++i)
   //   l.add_state( to_string(i));
 
   // // Add states 0 and 1. The state value is optional, but states must either
   // // all have state values, or not have state values at all.
-  // l.add_state("Green");
-  // l.add_state("Red");
   //
   // // Add an action label with index 0. The second (optional) argument
   // // indicates that this is not an internal label.
