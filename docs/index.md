@@ -1,6 +1,7 @@
 ## Benchmarks
 - [lps2lts_time_memory](#benchmark-lps2lts_time_memory)
 - [lps2lts_allocators](#benchmark-lps2lts_allocators)
+- [aterm_creation_fixed_nesting_variable_arity](#aterm_creation_fixed_nesting_variable_arity)
 
 ___
 
@@ -31,3 +32,9 @@ TCmalloc and JEmalloc shared libraries are preloaded with the `LD_PRELOAD` mecha
 ![benchmark-lps2lts_allocators-small-plot](https://raw.githubusercontent.com/gkarlos/mcrl2-perf/master/docs/images/plots/allocators-small.png)
 
 ![benchmark-lps2lps2lts_allocators-medium-plot](https://raw.githubusercontent.com/gkarlos/mcrl2-perf/master/docs/images/plots/allocators-medium.png)
+
+<span id="aterm_creation_fixed_nesting_variable_arity"></span>
+
+### Creation of terms with depth 1 and variable arity
+
+![term_creation_depth_1_variable_arity](https://raw.githubusercontent.com/gkarlos/mcrl2-perf/master/docs/images/plots/term_creation_depth_1_variable_arity.png)

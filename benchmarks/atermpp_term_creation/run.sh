@@ -1,14 +1,29 @@
 MCRL2_HOME=../../mcrl2-release/mcrl2
 LIB_DIR=$MCRL2_HOME/libraries/atermpp
 BENCH_DIR=$LIB_DIR/benchmarks
-BIN=mcrl2_perf_benchmark_libatermpp_test
+BIN=mcrl2_perf_benchmark_term_creation
+
+set -e
+
+
+cleanup()
+{
+  ### CLEANUP ###
+  echo "Cleaning up..."
+  # Remove the benchmarks dir
+  rm -rf $BENCH_DIR
+  # Restore CMakeLists.txt
+  head -n -1 $LIB_DIR/CMakeLists.txt > temp.txt && mv temp.txt $LIB_DIR/CMakeLists.txt
+}
+
+trap 'cleanup' INT 20
 
 #Update the CMakeLists.txt of the LTSlib
 echo "add_subdirectory(benchmarks)" >> $LIB_DIR/CMakeLists.txt
 #Create a benchmarks dir to hold the sources under the LTSlib directory
 rm -rf $BENCH_DIR && mkdir $BENCH_DIR
 #Declare the source files
-declare -a sources=(test.cpp)
+declare -a sources=(benchmark_term_creation.cpp)
 #Copy the sources\
 for f in "${sources[@]}"; do
   cp $f $BENCH_DIR/
@@ -28,9 +43,5 @@ echo
 
 $MCRL2_HOME/build/stage/bin/$BIN
 
-### CLEANUP ###
 
-# Remove the benchmarks dir
-rm -rf $BENCH_DIR
-# Restore CMakeLists.txt
-head -n -1 $LIB_DIR/CMakeLists.txt > temp.txt && mv temp.txt $LIB_DIR/CMakeLists.txt
+cleanup
