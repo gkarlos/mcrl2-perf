@@ -1,4 +1,7 @@
 import matplotlib.pyplot as plt
+from matplotlib import rcParams
+plt.rcdefaults()
+rcParams.update({'figure.autolayout': True})
 
 unique_args = [1681, 3476, 1253, 1692, 2127, 2683, 3256, 3657, 4444, 4767, 5164]
 unique_args = [t / 1000.0 for t in unique_args]

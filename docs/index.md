@@ -37,4 +37,7 @@ TCmalloc and JEmalloc shared libraries are preloaded with the `LD_PRELOAD` mecha
 
 ### Creation of terms with depth 1 and variable arity
 
+We create terms of depth/nesting 1. That is, terms whose arguments are constants.
+e.g f() f(a) f(a,b, ...)
+
 ![term_creation_depth_1_variable_arity](https://raw.githubusercontent.com/gkarlos/mcrl2-perf/master/docs/images/plots/term_creation_depth_1_variable_arity.png)
