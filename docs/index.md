@@ -38,6 +38,9 @@ TCmalloc and JEmalloc shared libraries are preloaded with the `LD_PRELOAD` mecha
 ### Creation of terms with depth 1 and variable arity
 
 We create terms of depth/nesting 1. That is, terms whose arguments are constants.
-e.g f() f(a) f(a,b, ...)
+We test two cases. One where each argument is unique, e.g f(), f(a), f(b,c), f(d, e, f), etc, 
+and one where the same argument term is reused, e.g f(a), f(a, a), f(a, a, a) etc.
+
+Only the time time to create the term itself is measured, i.e `aterm_appl appl_term( ...);`, meaning that argument creation is left out. Mean values are reported.
 
 ![term_creation_depth_1_variable_arity](https://raw.githubusercontent.com/gkarlos/mcrl2-perf/master/docs/images/plots/term_creation_depth_1_variable_arity.png)
