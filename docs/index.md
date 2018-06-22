@@ -2,6 +2,7 @@
 - [lps2lts_time_memory](#benchmark-lps2lts_time_memory)
 - [lps2lts_allocators](#benchmark-lps2lts_allocators)
 - [aterm_creation_fixed_nesting_variable_arity](#aterm_creation_fixed_nesting_variable_arity)
+- [aterm_creation_variable_nesting_variable_arity](#aterm_creation_variable_nesting_variable_arity)
 
 ___
 
@@ -38,9 +39,14 @@ TCmalloc and JEmalloc shared libraries are preloaded with the `LD_PRELOAD` mecha
 ### Creation of terms with depth 1 and variable arity
 
 We create terms of depth/nesting 1. That is, terms whose arguments are constants.
-We test two cases. One where each argument is unique, e.g f(), f(a), f(b,c), f(d, e, f), etc, 
+We test two cases. One where each argument is unique, e.g f(), f(a), f(b,c), f(d, e, f), etc,
 and one where the same argument term is reused, e.g f(a), f(a, a), f(a, a, a) etc.
 
 Only the time time to create the term itself is measured, i.e `aterm_appl appl_term( ...);`, meaning that argument creation is left out. Mean values are reported.
 
 ![term_creation_depth_1_variable_arity](https://raw.githubusercontent.com/gkarlos/mcrl2-perf/master/docs/images/plots/term_creation_depth_1_variable_arity.png)
+
+<span id="aterm_creation_variable_nesting_variable_arity"></span>
+
+### Creation of term with variable depth and variable arity
+![aterm_creation_variable_nesting_variable_arity](https://raw.githubusercontent.com/gkarlos/mcrl2-perf/master/docs/images/plots/atermpp_term_creation_unique_heatmap.png)

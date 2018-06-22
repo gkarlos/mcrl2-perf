@@ -146,6 +146,114 @@ double sample_high_resolution_clock(unsigned int n)
   return sum / ts.size();
 }
 
+double time_nested_term_creation(int nesting, int arity, bool unique_args)
+{
+  double res;
+  vector<aterm> args(arity);
+  std::string id = unique_symbol();
+
+  if ( unique_args)
+  {
+    for ( int i = 0; i < arity; ++i)
+    {
+      //Create @arity number arguments of @nesting nesting
+      std::string arg_id = unique_symbol();
+      function_symbol arg( arg_id, 0);
+      aterm_appl arg_term(arg);
+
+      for ( int j = 0; j < nesting - 1; ++j)
+      {
+        std::string arg_arg_id = unique_symbol();
+        function_symbol arg_arg( arg_arg_id, 1);
+        arg_term = aterm_appl(arg_arg, arg_term);
+      }
+
+      args[i] = arg_term;
+    }
+
+
+    function_symbol f( id, arity);
+
+    if ( arity)
+    {
+      high_resolution_clock::time_point t1 = high_resolution_clock::now();
+      /* Create term here */
+      aterm_appl appl_term(f, args.begin(), args.end());
+
+      high_resolution_clock::time_point t2 = high_resolution_clock::now();
+
+      duration<double, std::nano> t = duration_cast<duration<double>>(t2 - t1);
+
+      res = t.count();
+    }
+    else
+    {
+      high_resolution_clock::time_point t1 = high_resolution_clock::now();
+      /* Create term here */
+      aterm_appl appl_term(f);
+
+      high_resolution_clock::time_point t2 = high_resolution_clock::now();
+
+      duration<double, std::nano> t = duration_cast<duration<double>>(t2 - t1);
+
+      res = t.count();
+    }
+
+  }
+  else
+  {
+
+
+
+    function_symbol f( id, arity);
+
+    if ( arity)
+    {
+      std::string arg_id = unique_symbol();
+      std::string arg_arg_id = unique_symbol();
+      function_symbol arg( arg_id, 1);
+      function_symbol arg_arg(arg_arg_id, 0);
+      aterm_appl arg_arg_term(arg_arg);
+      aterm_appl arg_term(arg, arg_arg_term);
+
+      for ( int j = 0; j < nesting - 1; ++j) // Created a (@nesting - 1)-nested term
+      {
+        arg_term = aterm_appl(arg, arg_term);
+      }
+
+      for ( int i = 0; i < arity; ++i) // Use the same term as arg
+      {
+        //Create @arity number arguments of @nesting nesting
+        args[i] = arg_term;
+      }
+
+      high_resolution_clock::time_point t1 = high_resolution_clock::now();
+      /* Create term here */
+      aterm_appl appl_term(f, args.begin(), args.end());
+
+      high_resolution_clock::time_point t2 = high_resolution_clock::now();
+
+      duration<double, std::nano> t = duration_cast<duration<double>>(t2 - t1);
+
+      res = t.count();
+    }
+    else
+    {
+      high_resolution_clock::time_point t1 = high_resolution_clock::now();
+      /* Create term here */
+      aterm_appl appl_term(f);
+
+      high_resolution_clock::time_point t2 = high_resolution_clock::now();
+
+      duration<double, std::nano> t = duration_cast<duration<double>>(t2 - t1);
+
+      res = t.count();
+    }
+  }
+
+  return res;
+}
+
 
 void benchmark_aterm_creation(void)
 {
@@ -158,35 +266,75 @@ void benchmark_aterm_creation(void)
   printf("[+] Running benchmark: nesting_1_arity_%d_%d_unique_args\n\n", MIN_ARITY, MAX_ARITY);
 
   // cout << "[+] Running benchmark: fixed_nesting_2_variable_arity " << endl;
-  for ( size_t arity = MIN_ARITY; arity <= MAX_ARITY; ++arity )
-  {
-    vector<double> ts(N);
-
-    for ( size_t i = 0; i < N; ++i )
-    {
-      double t = time_term_creation(arity, true) - clock_avg;
-      ts[i] = t;
-    }
-
-    printf( "    Arity %2zu | ", arity);
-    pp_results(ts);
-  }
+  // for ( size_t arity = MIN_ARITY; arity <= MAX_ARITY; ++arity )
+  // {
+  //   vector<double> ts(N);
+  //
+  //   for ( size_t i = 0; i < N; ++i )
+  //   {
+  //     double t = time_term_creation(arity, true) - clock_avg;
+  //     ts[i] = t;
+  //   }
+  //
+  //   printf( "    Arity %2zu | ", arity);
+  //   pp_results(ts);
+  // }
 
   printf("\n[+] Running benchmark: nesting_1_arity_%d_%d_fixed_args\n\n", MIN_ARITY, MAX_ARITY);
 
+  // for ( size_t arity = MIN_ARITY; arity <= MAX_ARITY; ++arity )
+  // {
+  //   vector<double> ts(N);
+  //
+  //   for ( size_t i = 0; i < N; ++i )
+  //   {
+  //     double t = time_term_creation(arity, false) - clock_avg;
+  //     ts[i] = t;
+  //   }
+  //
+  //   printf( "    Arity %2zu | ", arity);
+  //
+  //   pp_results(ts);
+  // }
+
+  printf("\n[+] Running benchmark: nesting_%d_%d_arity_%d_%d_unique_args\n\n", MIN_NESTING, MAX_NESTING, MIN_ARITY, MAX_ARITY);
+
   for ( size_t arity = MIN_ARITY; arity <= MAX_ARITY; ++arity )
   {
-    vector<double> ts(N);
-
-    for ( size_t i = 0; i < N; ++i )
+    for ( size_t nesting = MIN_NESTING; nesting <= MAX_NESTING; ++nesting)
     {
-      double t = time_term_creation(arity, false) - clock_avg;
-      ts[i] = t;
+      vector<double> ts(N);
+      for ( size_t i = 0; i < N; ++i )
+      {
+        double t = time_nested_term_creation(nesting, arity, true) - clock_avg;
+        ts[i] = t;
+
+      }
+
+      cout << (int) mean(ts) << ",";
     }
 
-    printf( "    Arity %2zu | ", arity);
+    cout << endl;
+  }
 
-    pp_results(ts);
+  printf("\n[+] Running benchmark: nesting_%d_%d_arity_%d_%d_fixed_args\n\n", MIN_NESTING, MAX_NESTING, MIN_ARITY, MAX_ARITY);
+
+  for ( size_t arity = MIN_ARITY; arity <= MAX_ARITY; ++arity )
+  {
+    for ( size_t nesting = MIN_NESTING; nesting <= MAX_NESTING; ++nesting)
+    {
+      vector<double> ts(N);
+      for ( size_t i = 0; i < N; ++i )
+      {
+        double t = time_nested_term_creation(nesting, arity, false) - clock_avg;
+        ts[i] = t;
+
+      }
+
+      cout << (int) mean(ts) << ",";
+    }
+
+    cout << endl;
   }
 
   // 1. same symbol / different arguments
